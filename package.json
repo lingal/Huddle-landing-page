@@ -1,7 +1,7 @@
 {
   "name": "huddle-landing-page-with-single-introductory-section-master",
   "version": "1.0.0",
-  "description": "![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)",
+  "description": "![Design preview for the Huddle landing page with single introductory section]",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
