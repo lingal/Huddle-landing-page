@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $violet;
+    background-image: url(/images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: $ff-secondary;
+    color: #fff;
+    font-weight: $fw-400;
+    width: 85%;
+    max-width: 1200px;
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    @media (min-width: 800px) {
+        background-image: url(/images/bg-desktop.svg);
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+    }
+}
+
+img:not(.logo) {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: $ff-primary;
+    font-weight: $fw-600;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}

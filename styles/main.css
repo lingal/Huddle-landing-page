@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #674baf;
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  width: 85%;
+  max-width: 1200px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+  }
+}
+
+img:not(.logo) {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-auto-columns: minmax(0, 18rem);
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
+}
+
+.header .logo {
+  height: 1.75rem;
+}
+
+@media (min-width: 800px) {
+  .header {
+    grid-column: 1/-1;
+  }
+  .header .logo {
+    height: 3rem;
+  }
+}
+
+.main {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .main {
+    grid-column: 1/-1;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+  }
+  .main .main-img {
+    animation: flip-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes flip-in {
+    0% {
+      transform: rotateX(-80deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+.intro .intro-title {
+  margin-bottom: 1.5rem;
+}
+
+.intro .intro-text {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro .btn {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.5rem 4rem;
+  display: inline-block;
+  border-radius: 100px;
+  color: #674baf;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 800px) {
+  .intro .btn {
+    padding: 0.75rem 3rem;
+    transition: 350ms ease;
+    font-size: 0.9rem;
+  }
+  .intro .btn:hover {
+    background-color: #e882e8;
+    color: #fff;
+  }
+  .intro .btn:active {
+    transform: translateY(0.2rem);
+  }
+}
+
+@media (min-width: 800px) {
+  .intro {
+    text-align: left;
+  }
+}
+
+.footer {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: 100%;
+}
+
+.footer .social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
+  justify-self: center;
+}
+
+.footer .social-links .social-link {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 800px) {
+  .footer .social-links .social-link {
+    transition: 450ms ease;
+  }
+  .footer .social-links .social-link:hover {
+    color: #e882e8;
+  }
+  .footer .social-links .social-link:active {
+    transform: scaleX(0.2);
+  }
+}
+
+.footer .attribution {
+  display: none;
+  order: -4;
+  justify-self: center;
+}
+
+@media (min-width: 800px) {
+  .footer {
+    grid-column: 1/-1;
+    justify-self: right;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  .footer .attribution {
+    display: block;
+  }
+}
+/*# sourceMappingURL=main.css.map */
